@@ -12,7 +12,7 @@ function App() {
 
 
       <img alt="logo" className="logo" src={electronLogo} />
-      <div className="creator">holi</div>
+      <div className="creator">holi crayoli</div>
       <div className="text">
         Build an Electron app with <span className="react">React</span>
       </div>
