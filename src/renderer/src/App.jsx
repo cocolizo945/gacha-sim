@@ -1,27 +1,26 @@
-import Versions from './components/Versions'
-import electronLogo from './assets/electron.svg'
-import Navbar from './components/navbar.jsx'
+
+import NavBar from './components/navbar.jsx';
+import { Routes, Route, Outlet, Link } from "react-router-dom";
+import Boosters from './views/openbooster.jsx';
+import DeckView from './views/deckview.jsx';
 
 function App() {
-  const ipcHandle = () => window.electron.ipcRenderer.send('ping')
+  
 
   return (
     <>
-
-      <Navbar/>
-
-
-      <img alt="logo" className="logo" src={electronLogo} />
-      <div className="creator">holi crayoli</div>
-      <div className="text">
-        Build an Electron app with <span className="react">React</span>
-      </div>
-      <p className="tip">
-        Please try pressing <code>F12</code> to open the devTool
-      </p>
-
-    </>
-  )
+    <NavBar/>
+    <div>
+    <Routes>
+      
+      <Route path="decks" element={<DeckView />} />
+      <Route path="index" element={<Boosters />} />
+      <Route path="/" element={<Boosters />}>
+    </Route>
+  </Routes>
+  </div>
+  </>
+  );
 }
 
 export default App

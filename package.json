@@ -20,7 +20,10 @@
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.1",
     "@electron-toolkit/utils": "^4.0.0",
-    "electron-updater": "^6.3.9"
+    "electron-updater": "^6.3.9",
+    "react-card-flip": "^1.2.3",
+    "react-router": "^7.4.0",
+    "react-router-dom": "^7.4.0"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config": "^2.0.0",
